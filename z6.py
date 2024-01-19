@@ -15,3 +15,4 @@ if __name__ == "__main__":
  print(f"Odejmowanie: {subtract_numbers(num1,num2)}")
  print(f"Mnożenie: {multiply_numbers( num1, num2)}")
  print(f"Dzielenie: {divide_numbers(num1 , num2)}")
+
