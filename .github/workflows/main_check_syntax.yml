@@ -25,7 +25,6 @@ jobs:
       - name: Install dependencies
         run: |
           pip install --upgrade flake8
-          pip install --upgrade unittest
           
       - name: Check code style with flake8
         run: flake8
