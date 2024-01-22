@@ -15,7 +15,7 @@ if __name__ == "__main__":
  print(f"Odejmowanie: {subtract_numbers(num1, num2)}")
  print(f"Mnożenie: {multiply_numbers(num1, num2)}")
  print(f"Dzielenie: {divide_numbers(num1, num2)}")
-  import unittest
+ import unittest
 from app import add_numbers, subtract_numbers, multiply_numbers,
 divide_numbers
 class TestMathFunctions(unittest.TestCase):
