@@ -1,24 +1,27 @@
-name: workflow_check_python_version 
-on: 
-  push: 
-    branches: [ "check_python_version" ] 
-  workflow_dispatch: 
+name: workflow_check_syntax
+on:
+  push:
+    branches: [ "check_syntax" ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ${{ matrix.os }} 
+    strategy: 
+      matrix: 
+        python-version: [3.9, 3.10, 3.11] 
+        os: [windows-latest, ubuntu-latest] 
+    steps:  
+      - uses: actions/checkout@v3   
+        with:   
+          python-version: ${{ matrix.python-version }}  
+          cache: 'pip'
 
-jobs:  
-  build:  
-    runs-on: ${{ matrix.os }}   
-    strategy:   
-      matrix:   
-        python-version: ['3.11']   
-        os: [windows-latest, ubuntu-latest]   
-         
-    steps: 
-      - uses: actions/checkout@v3 
-        with: 
-          python-version: '3.11' 
-          cache: 'pip'  
-
-      - name: Run a multi-line script 
+      - name: Run a multi-line script
         run: | 
-          pip install --upgrade pip 
+          pip install --upgrade pip
           python -V 
+
+      - name: Install flake8
+        run: pip install --upgrade flake8
+      - name: Check code style with flake8
+        run: flake8
