@@ -1,19 +1,4 @@
-def add_numbers(a, b):
-    return a + b
-
-
-def subtract_numbers(a, b):
-    return a - b
-
-
-def multiply_numbers(a, b):
-    return a * b
-
-
-def divide_numbers(a, b):
-    if b == 0:
-        raise ValueError("Dzielenie przez zero jest niedozwolone.")
-    return a / b
+from app.py import add_numbers, subtract_numbers, multiply_numbers, divide_numbers
 
 
 if __name__ == "__main__":
