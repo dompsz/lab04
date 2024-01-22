@@ -16,11 +16,8 @@ jobs:
         with:
           python-version: '3.11'
           cache: 'pip' 
-
-      - name: test
-        run: pip help install
           
       - name: Run a multi-line script
         run: |
-          pip install --upgrade
+          pip install --upgrade pip
           python -V
