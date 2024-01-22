@@ -19,5 +19,6 @@ jobs:
           
       - name: Run a multi-line script
         run: |
+          pip help install
           pip install --upgrade
           python -V
