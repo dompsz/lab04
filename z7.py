@@ -16,9 +16,6 @@ def divide_numbers(a, b):
     return a / b
 
 
-from app import add_numbers, subtract_numbers, multiply_numbers, divide_numbers
-
-
 if __name__ == "__main__":
     num1 = 10
     num2 = 5
