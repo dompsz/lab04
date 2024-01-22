@@ -19,7 +19,7 @@ jobs:
 
       - name: Run a multi-line script 
         run: |  
-          pip install --upgrade
+          pip install --upgrade pip
           python -V  
 
       - name: Install dependencies
